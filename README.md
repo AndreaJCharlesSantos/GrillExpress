@@ -1,5 +1,5 @@
 # GrillExpress
 Pa el equipo más juapo
-# Tema: Shopart
+## Tema: Shopart
 
-# Plugins hasta el momento: Elementor y WooCommerce
+## Plugins hasta el momento: Elementor y WooCommerce
