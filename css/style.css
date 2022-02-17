@@ -1696,6 +1696,10 @@ ol {
 	padding-top: 80px;
 }
 
+.product-details1 {
+	padding-top: 40px;
+}
+
 .product__details__pic__item {
 	margin-bottom: 20px;
 }
@@ -1711,6 +1715,138 @@ ol {
 .product__details__pic__slider.owl-carousel .owl-item img {
 	width: auto;
 }
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*MI SECCION EZER MANUEL BANDA OLIVO*/
+
+.compra{
+	border: solid 2px white;
+	border-radius: 3px;
+	margin-right: 100px;
+	margin-left: 100px;
+	background-color: #ffbc5c;
+}
+
+.pie-compra{
+	border: solid 2px white;
+	border-radius: 3px;
+	margin-right: 100px;
+	margin-left: 100px;
+	background-color: #FF9052;
+}
+
+.compra h3{
+	color: #252525;
+	font-weight: 610;
+	margin-top: 20px;
+	margin-bottom: 16px;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.compra h4{
+	color: #727272;
+	font-weight: 600;
+	padding-bottom: 30px;
+	text-align: center;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.compra-tabla{
+	margin-right: 30px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	background: #ffffff;
+}
+
+.tabla{
+	border: none;
+	margin-right: 30px;
+}
+
+.tabla th{
+	text-align: center;
+	font-family: sans-serif;
+	width: 200px;
+	font-size: 25px;
+	font-weight: 100px;
+}
+
+.tabla .producto{
+	text-align: left;
+	font-family: sans-serif;
+	width: 500px;
+	font-size: 25px;
+	font-weight: 100px;
+	padding-left: 20px;
+}
+
+.tabla .cantidad-producto{
+	text-align: right;
+	font-family: sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #5f6368;
+}
+
+.tabla .lista-productos img{
+	width: 30%;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.tabla .lista-productos label{
+	margin-left: 10px;
+	font-family: sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5f6368;
+}
+
+.pie-compra .compra-aceptar{
+	margin: 20px;
+}
+
+.pie-compra .compra-aceptar{
+	display: flex;
+}
+
+.pie-compra .compra-aceptar main{
+	width: 50%;
+	margin: 10px 0px 0px 40px;
+  padding: 20px 20px;
+}
+
+.pie-compra .compra-aceptar aside{
+	width: 50%;
+	margin: 10px 20px 0px 40px;
+  padding: 10px 20px;
+}
+
+.pie-compra .compra-aceptar button{
+	margin-left: 100px;
+}
+
+.pie-compra .compra-aceptar h4{
+	color: #252525;
+	font-weight: 610;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.pie-compra .compra-aceptar label{
+	color: #727272;
+	margin-left: 140px;
+	font-weight: 600;
+	font-size: 25px;
+	font-family: sans-serif;
+
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 .product__details__text h3 {
 	color: #252525;
