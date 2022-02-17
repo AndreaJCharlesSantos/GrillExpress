@@ -1469,11 +1469,10 @@ ol {
 	display: inline-block;
 }
 
-.filter__sort .nice-select {
+/*.filter__sort .nice-select {
 	background-color: #fff;
 	border-radius: 0;
 	border: none;
-	display: inline-block;
 	float: none;
 	height: 0;
 	line-height: 0;
@@ -1483,7 +1482,7 @@ ol {
 	color: #1c1c1c;
 	font-weight: 700;
 	cursor: pointer;
-}
+}*/
 
 .filter__sort .nice-select span {
 	color: #1c1c1c;
@@ -1846,7 +1845,38 @@ ol {
 
 }
 
+
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*Hora de arreglar el cochinero*/
+.lista{
+	list-style: none;
+}
+.Select{
+	background-color: #fff;
+ border-radius: 5px;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+				display: table-cell !important ;
+				align-items: center;
+    float: unset;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 900;
+    height: 42px;
+    line-height: 40px;
+    outline: none;
+    padding-left: 18px;
+    position: relative;
+    text-align: left !important;
+    user-select: none;
+    width: 200px;
+}
+
+
+
+
+/* */
 
 .product__details__text h3 {
 	color: #252525;
