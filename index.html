@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>GrillExpress</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -90,8 +90,8 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
+                            <li class="active"><a href="./index.html">Catálogo</a></li>
+                            <!-- <li><a href="./shop-grid.html">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
@@ -99,9 +99,9 @@
                                     <li><a href="./checkout.html">Check Out</a></li>
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            </li> -->
+                            <li><a href="./blog.html">Receta</a></li>
+                            <!-- <li><a href="./contact.html">Contact</a></li> -->
                         </ul>
                     </nav>
                 </div>
@@ -138,17 +138,16 @@
                             <span>Departamentos</span>
                         </div>
                         <ul>
-                            <li><a href="#">Fresh Meat</a></li>
-                            <li><a href="#">Vegetables</a></li>
-                            <li><a href="#">Fruit & Nut Gifts</a></li>
-                            <li><a href="#">Fresh Berries</a></li>
-                            <li><a href="#">Ocean Foods</a></li>
-                            <li><a href="#">Butter & Eggs</a></li>
-                            <li><a href="#">Fastfood</a></li>
-                            <li><a href="#">Fresh Onion</a></li>
-                            <li><a href="#">Papayaya & Crisps</a></li>
-                            <li><a href="#">Oatmeal</a></li>
-                            <li><a href="#">Fresh Bananas</a></li>
+                            <li><a href="#">Carnes</a></li>
+                            <ul class="header__menu__dropdown">
+                                <li><a href="#">Extra</a></li>
+                                <li><a href="#">Primera A</a></li>
+                                <li><a href="#">Primera B</a></li>
+                                <li><a href="#">Segunda</a></li>
+                                <li><a href="#"> Tercera</a></li>
+                            </ul>
+                            <li><a href="#">Utensilios</a></li>
+                            <li><a href="#">Sazonadores</a></li>
                         </ul>
                     </div>
                 </div>
@@ -190,28 +189,28 @@
             <div class="row">
                 <div class="categories__slider owl-carousel">
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
-                            <h5><a href="#">Fresh Fruit</a></h5>
+                        <div class="categories__item set-bg" data-setbg="img/product/producto-lomo-alto.jpg">
+                            <h5><a href="#">Extra</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
-                            <h5><a href="#">Dried Fruit</a></h5>
+                        <div class="categories__item set-bg" data-setbg="img/product/producto-barbilla.jpg">
+                            <h5><a href="#">Primera A</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
-                            <h5><a href="#">Vegetables</a></h5>
+                        <div class="categories__item set-bg" data-setbg="img/product/producto-aguja.png">
+                            <h5><a href="#">Primera B</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
+                        <div class="categories__item set-bg" data-setbg="img/product/producto-aleta.jpg">
+                            <h5><a href="#">Segunda</a></h5>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-5.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
+                        <div class="categories__item set-bg" data-setbg="img/product/producto-costillar.jpg">
+                            <h5><a href="#">Tercera</a></h5>
                         </div>
                     </div>
                 </div>
@@ -219,6 +218,7 @@
         </div>
     </section>
     <!-- Categories Section End -->
+
 
     <!-- Featured Section Begin -->
     <section class="featured spad">
@@ -230,19 +230,22 @@
                     </div>
                     <div class="featured__controls">
                         <ul>
-                            <li class="active" data-filter="*">All</li>
-                            <li data-filter=".oranges">Oranges</li>
-                            <li data-filter=".fresh-meat">Fresh Meat</li>
-                            <li data-filter=".vegetables">Vegetables</li>
-                            <li data-filter=".fastfood">Fastfood</li>
+                            <li class="active" data-filter="*">Todos</li>
+                            <li data-filter=".extra">Extra</li>
+                            <li data-filter=".primeraa">Primera A</li>
+                            <li data-filter=".primerab">Primera B</li>
+                            <li data-filter=".segunda">Segunda</li>
+                            <li data-filter=".tercera">Tercera</li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+
             <div class="row featured__filter">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix extra">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/lomobajo.jpg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -250,14 +253,15 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">Lomo bajo</a></h6>
+                            <h5>$160.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mix primeraa">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-2.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/cadera.jpg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -265,14 +269,14 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">Cadera</a></h6>
+                            <h5>$150.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix primeraa">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-3.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/tapilla.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -280,14 +284,15 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">Tapilla</a></h6>
+                            <h5>$150.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mix primerab">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-4.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/aguja.png">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -295,14 +300,15 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">Aguja</a></h6>
+                            <h5>$150.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mix primerab">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-5.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/espaldilla.jpg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -310,14 +316,15 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">Espaldilla</a></h6>
+                            <h5>$150.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mix primerab">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-6.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/rabillo.jpg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -325,14 +332,14 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">Rabillo</a></h6>
+                            <h5>$150.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix segunda">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-7.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/aleta.jpg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -340,14 +347,15 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">Aleta</a></h6>
+                            <h5>$150.00</h5>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mix tercera">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-8.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/costilla.jpg">
                             <ul class="featured__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -355,8 +363,24 @@
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Crab Pool Security</a></h6>
-                            <h5>$30.00</h5>
+                            <h6><a href="#">Costilla</a></h6>
+                            <h5>$150.00</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mix tercera">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="img/featured/morrillo.jpg">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">morrillo</a></h6>
+                            <h5>$150.00</h5>
                         </div>
                     </div>
                 </div>
@@ -366,7 +390,7 @@
     <!-- Featured Section End -->
 
     <!-- Banner Begin -->
-    <div class="banner">
+    <!-- <div class="banner">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -381,11 +405,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Banner End -->
 
     <!-- Latest Product Section Begin -->
-    <section class="latest-product spad">
+    <!-- <section class="latest-product spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
@@ -585,7 +609,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Latest Product Section End -->
 
     <!-- Blog Section Begin -->
@@ -594,53 +618,57 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title from-blog__title">
-                        <h2>From The Blog</h2>
+                        <h2>Recetas</h2>
                     </div>
+                    
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="blog__item">
                         <div class="blog__item__pic">
-                            <img src="img/blog/blog-1.jpg" alt="">
+                            <img src="img/blog/volcanes.jpg" alt="">
                         </div>
                         <div class="blog__item__text">
                             <ul>
                                 <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                 <li><i class="fa fa-comment-o"></i> 5</li>
                             </ul>
-                            <h5><a href="#">Cooking tips make cooking simple</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                            <h5><a href="#">Volcanes de Diezmillo</a></h5>
+                            <a href="#" class="blog__btn">Leer más <span class="arrow_right"></span></a>
+                            <!-- <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="blog__item">
                         <div class="blog__item__pic">
-                            <img src="img/blog/blog-2.jpg" alt="">
+                            <img src="img/blog/burritos.jpg" alt="">
                         </div>
                         <div class="blog__item__text">
                             <ul>
                                 <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                 <li><i class="fa fa-comment-o"></i> 5</li>
                             </ul>
-                            <h5><a href="#">6 ways to prepare breakfast for 30</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                            <h5><a href="#">Burritos de arrachera</a></h5>
+                            <a href="#" class="blog__btn">Leer más <span class="arrow_right"></span></a>
+                            <!-- <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                     <div class="blog__item">
                         <div class="blog__item__pic">
-                            <img src="img/blog/blog-3.jpg" alt="">
+                            <img src="img/blog/discada.jpg" alt="">
                         </div>
                         <div class="blog__item__text">
                             <ul>
                                 <li><i class="fa fa-calendar-o"></i> May 4,2019</li>
                                 <li><i class="fa fa-comment-o"></i> 5</li>
                             </ul>
-                            <h5><a href="#">Visit the clean farm in the US</a></h5>
-                            <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                            <h5><a href="#">Tacos de discada</a></h5>
+                            <a href="#" class="blog__btn">Leer más <span class="arrow_right"></span></a>
+                            <!-- <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p> -->
                         </div>
                     </div>
                 </div>
