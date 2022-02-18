@@ -1719,6 +1719,8 @@ ol {
 
 /*MI SECCION EZER MANUEL BANDA OLIVO*/
 
+/*INICIO DE CARRITO*/
+
 .compra{
 	border: solid 2px white;
 	border-radius: 3px;
@@ -1844,6 +1846,114 @@ ol {
 	font-family: sans-serif;
 
 }
+
+/*FIN DE CARRITO*/
+/*INICIO DE ORDEN*/
+
+.orden{
+	border: solid 2px white;
+	border-radius: 3px;
+	margin-right: 200px;
+	margin-left: 200px;
+	background-color: #ffbc5c;
+}
+
+.orden-compra{
+	margin-right: 50px;
+	margin-left: 50px;
+	margin-bottom: 20px;
+	background: #ffffff;
+}
+
+.orden-ticket h3{
+	color: #252525;
+	font-weight: 610;
+	margin-top: 20px;
+	padding-top: 20px;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.orden-ticket .usuario{
+	margin-top: 40px;
+	margin-right: 110px;
+	margin-left: 150px;
+}
+
+.orden-ticket .usuario input{
+	border: none;
+	border-bottom: 3px solid #5E5E5E;
+	display: block;
+	width: 330px;
+}
+
+.orden-ticket .direccion{
+	margin-top: 20px;
+	margin-right: 110px;
+	margin-left: 150px;
+}
+
+.orden-ticket .direccion img{
+	width: 10%;
+}
+
+.orden-ticket .direccion input{
+	border: none;
+	border-bottom: 3px solid #5E5E5E;
+	display: block;
+	width: 330px;
+}
+
+.orden-ticket .info-compra{
+	display: flex;
+	margin-right: 150px;
+	margin-left: 150px;
+}
+
+.orden-ticket .info-compra main{
+	width: 60%;
+	margin: 10px 0px 0px 10px;
+}
+
+.orden-ticket .info-compra aside{
+	width: 40%;
+	margin: 10px 0px 0px 20px;
+}
+
+.orden-ticket .info-compra main, label{
+	text-align: right;
+	padding-top: 6px;
+}
+
+.orden-ticket .info-compra aside, label{
+	text-align: center;
+}
+
+.total{
+	color: #252525;
+	font-weight: 610;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+
+.precio{
+	font-weight: 600;
+	font-size: 25px;
+	font-family: sans-serif;
+	color: #727272;
+}
+
+.orden-ticket .boton-orden{
+	margin-top: 20px;
+	margin-right: 150px;
+	margin-left: 150px;
+}
+
+.orden-ticket .boton-orden button{
+	margin-left: 250px;
+}
+
+/*FIN DE ORDEN*/
 
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
