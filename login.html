@@ -13,6 +13,44 @@
   </head>
   <body style="background-color: #ffffff;">
 
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="img/logitor.png" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">Artículo: <span>$150.00</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i>Ingresar</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Catálogo</a></li>
+                <li><a href="./blog.html">Receta</a></li>
+                <li><a href="./login.html">Iniciar sesión</a></li>
+            </ul>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+
+    </div>
+    <!-- Humberger End -->
+
     <!-- Header Section Begin -->
     <header class="header">
         <div class="container">
@@ -25,31 +63,20 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li class="active"><a href="./index.html">Catálogo</a></li>
+                            <li><a href="./blog.html">Receta</a></li>
+                            <li><a href="./login.html">Iniciar sesión</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
                     <div class="header__cart">
-                        <div class="header__top__right__auth">
-                            <a href="#"><i class="fa fa-user"></i> Login</a>
-                        </div>
+
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="carrito.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
-                        <div class="header__cart__price">item: <span>$150.00</span></div>
+                        <div class="header__cart__price">Artículo: <span>$150.00</span></div>
 
                     </div>
 
@@ -67,15 +94,17 @@
         <div class="col"></div>
         <div class="col" style="width: 300px; background-color: #ffffff; border-radius: 5px;"  >
             <div class="form-cont" style="margin-top: 30px; margin-bottom: 30px; ">
+                <!-- <h2>Iniciar sesión</h2> -->
                 <form >
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Correo Electronico</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jhondue@example.com">
+                        
+                      <label for="exampleInputEmail1">Correo Electronico*</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jhondue@example.com"required>
                       
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword1">Contraseña</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña">
+                      <label for="exampleInputPassword1">Contraseña*</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña" required>
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>

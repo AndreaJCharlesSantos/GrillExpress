@@ -752,7 +752,7 @@ ol {
     text-align: center;
 	border-radius: 5px;
 	padding:10px 15px;
-	border: #000000 1px dashed;
+	/* border: #000000 1px dashed; */
 	/* filter:alpha(opacity=70);
 	-moz-opacity:.70;opacity:.70; */
 	/* background-color : transparent; */
