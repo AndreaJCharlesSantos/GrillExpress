@@ -6,8 +6,9 @@ https://themewagon.com/themes/free-bootstrap-4-html5-responsive-ecommerce-websit
 Color base de la página: #ffbc5c \\
 Color base (fuerte): #ff9052 \\
 ## Team:
-  Andrea
-  Ángel
-  Arturo
-  Ezer
-  Aldo
+
+  1. Andrea
+  2. Ángel
+  3. Arturo
+  4. Ezer
+  5. Aldo
