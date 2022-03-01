@@ -2411,16 +2411,14 @@ ol {
 }
 
 .checkout__form p {
-	column-rule: #b2b2b2;
+	column-rule: #000000;
 }
 
-.checkout__input {
-	margin-bottom: 24px;
-}
+
 
 .checkout__input p {
 	color: #1c1c1c;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .checkout__input p span {
@@ -2429,17 +2427,12 @@ ol {
 
 .checkout__input input {
 	width: 100%;
-	height: 46px;
-	border: 1px solid #ebebeb;
-	padding-left: 20px;
+	border: 1px solid #000000;
+	padding-left: 10px;
 	font-size: 16px;
-	color: #b2b2b2;
 	border-radius: 4px;
 }
 
-.checkout__input input.checkout__input__add {
-	margin-bottom: 20px;
-}
 
 .checkout__input input::placeholder {
 	color: #b2b2b2;
@@ -3208,6 +3201,27 @@ ol {
 .contact-form form button {
 	font-size: 18px;
 	letter-spacing: 2px;
+}
+
+/* Andrea */
+/*Contenedor del blog*/
+
+.container-blog textarea {
+	width: 100%;
+	margin: 5px 0px;
+	padding-left: 5px;
+}
+
+.checkout__input input{
+	margin-bottom: 10px;
+}
+
+.checkout__img{
+	margin: 5px 0px 10px 10px;
+}
+
+.checkout__img p {
+	color: #1c1c1c;
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
