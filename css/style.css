@@ -87,7 +87,7 @@ img {
 	max-width: 100%;
 }
 
-input:focus,
+/* input:focus,
 select:focus,
 button:focus,
 textarea:focus {
@@ -99,7 +99,7 @@ a:focus {
 	text-decoration: none;
 	outline: none;
 	color: #ffffff;
-}
+} */
 
 ul,
 ol {
@@ -3224,6 +3224,12 @@ ol {
 	color: #1c1c1c;
 }
 
+:focus-visible {
+    outline: 3px solid #9999FF;
+}
+:focus:not(:focus-visible){
+	outline: none;
+}
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 
 @media only screen and (min-width: 1200px) {
