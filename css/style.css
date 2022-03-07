@@ -430,6 +430,11 @@ ol {
 	text-align: center;
 }
 
+/* .header2 {
+	padding: 25px 0;
+	font-size: 20px;
+} */
+
 .header__menu ul li {
 	list-style: none;
 	display: inline-block;
@@ -1081,6 +1086,12 @@ ol {
 .breadcrumb__text h2 {
 	font-size: 48px;
 	color: #000000;
+	font-weight: 700;
+}
+
+.Title-blog h2{
+	font-size: 48px;
+	color: #ffffff;
 	font-weight: 700;
 }
 
