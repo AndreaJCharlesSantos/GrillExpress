@@ -13,13 +13,13 @@ Color base (fuerte): #ff9052 \\
   4. Ezer
   5. Aldo
 
-##Frontend:
+## Frontend:
 
 1. Andrea
 2. Ezer
 3. Aldo
 
-##Backend:
+## Backend:
 
 1. Carlos
 2. Arturo
