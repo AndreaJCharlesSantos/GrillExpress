@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,400&family=Roboto+Mono&family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -195,9 +194,46 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/tacosbistec.jpg">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Tacos de bistec</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 18 tortillas de maíz</td>   
+                                                        <td>1. Corta los bisteces en tiras, sazona con sal y pimienta.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 10 bisteces de res</td>   
+                                                        <td>2. En una sartén, calienta un poco de aceite y fríe la carne hasta que esté dorada.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Sal y pimienta al gusto</td>   
+                                                        <td>3. Retira del fuego,corta en pequeños cuadros para mayor deguste, haz los tacos y sirve.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Aceite vegetal</td>   
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
+
                         <div class="featured__item__text">
                             <h6><a href="#">Tacos de bistec</a></h6>
                         </div>
@@ -208,7 +244,44 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/tortasprofe.png">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn2" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal2">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Tortas del profe</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Bolillo</td>   
+                                                        <td>1. Calienta la carne que vas a utilizar para las tortas</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Carne de deshebrada</td>   
+                                                        <td>2. En un comal, coloca el bolillo partido a la mitad para que calentarlo.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Aguacate</td>   
+                                                        <td>3. Con la carne y el bolillo caliente, coloca una capa de aguacate en la base del pan, y ve colocando los ingredientes uno encima del otro.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Aceite vegetal</td>
+                                                        <td>4. Puedes agregar complementos al gusto, como tomate, cebolla u crema, listas para comer.</td>      
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -220,7 +293,44 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/tortaahogada.png">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn3" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal3">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Tortas ahogadas</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Bolillo</td>   
+                                                        <td>1. Calienta la carne que vas a utilizar para las tortas</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Carne de deshebrada</td>   
+                                                        <td>2. En un comal, coloca el bolillo partido a la mitad para que calentarlo.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Queso panela o queso crema</td>   
+                                                        <td>3. Con el bolillo en el comal, coloca una rebanada de queso panela o queso crema.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Salsa roja de tu elección</td>
+                                                        <td>4. Cuando hayas preparado tu torta con los ingredientes, remojala en la salsa roja que hayas escogido con anterioridad, listas para comer.</td>      
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -233,7 +343,46 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/volcancampechano.jpg">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn4" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal4">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Volcanes campechanos</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1 taza de longaniza, picada</td>   
+                                                        <td>1. En una sartén con suficiente aceite vegetal, cocina la cebolla hasta que obtengas un tono dorado. Añade la longaniza, fríe por unos minutos hasta que ambos comiencen a dorarse. Agrega la cecina y el chicharrón finamente picado, sazona con pimienta y mezcla hasta integrar; cocina por 8 minutos y retira del fuego. Reserva.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1 taza de cecina, en cuadros</td>   
+                                                        <td>2. Sobre un comal a fuego bajo calienta las tortillas por unos minutos para que se suavicen, luego añade sobre la superficie de la tortilla el Queso Manchego Rallado Zwan® y deja a fuego bajo para que poco a poco se dore la tortilla y el queso forme una costra, voltea la tortilla y repite, para que de esta manera la tortilla tenga queso por ambos lados.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Tortilla de maiz taquera</td>   
+                                                        <td>3. Para armar tu volcán, coloca una tortilla con costra de manchego sobre otra tortilla de costra de queso de manera que tengas una torre, agrega la mezcla de carne, añade cilantro y cebolla y, acompaña con limón y salsa roja al gusto, la sal es opcional. ¡Listo!</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Queso manchego</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Cebolla</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -246,7 +395,44 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/volcansirlon.jpg">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn5" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal5">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Volcanes de sirlon</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Tostadas chicas compradas o hechas en casa con tortillas</td>   
+                                                        <td>1. A cada tostada pondrás una porción generosa de carne y cubrirás con el queso rallado, usando tu mano haces un poco de presión para que se adhiera el queso a la carne.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Carne de res de sirlon</td>   
+                                                        <td>2. Las pones en una charola y horneas a temperatura baja hasta que el queso se derrita. Puedes usar horno de gas o eléctrico.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Queso rallado que gratine</td>   
+                                                        <td>3. Las sacas y pones encima de cada volcán un poco de salsa verde.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Salsa verde hecha en casa o comprada</td>
+                                                        <td>4. Decoras con cilantro y sirves. Te recomiendo sirvas inmediatamente para evitar que se suavicen y se rompan al comer.</td>      
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -259,7 +445,44 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/volcanarrachera.jpg">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn6" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal6">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Volcanes de arrachera</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Tostadas chicas compradas o hechas en casa con tortillas</td>   
+                                                        <td>1. Corta en tiras alargadas la arrachera previamente preparada o comprada.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1 paquete de arrachera marinada</td>   
+                                                        <td>2. Coloca algunas tortillas a fuego directo, hasta que se endurezcan como tostadas.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Queso rallado que gratine</td>   
+                                                        <td>3. Corta tiras de queso oaxaca y acomódalas sobre las tortillas.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Salsa verde hecha en casa o comprada</td>
+                                                        <td>4. Agrega las tiras de arrachera en cada tortilla con queso hasta que se derrita por completo el queso.</td>      
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -271,7 +494,44 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/carneasadar.jpg">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn7" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal7">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Carne asada regia</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Sal y pimienta al gusto</td>   
+                                                        <td>1. Colocar el carbón en el asador y dejar que solo queden las brazas.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Jugo de naranja o jugo de limón</td>   
+                                                        <td>2. Preparar la carne con un poco de sazonador al gusto y jugo de naranja o jugo de limón.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Carne de tu preferencia para asar</td>   
+                                                        <td>3. Cuando estén las brazas colocar la carne sobre el asador.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Sazonador de carne</td>
+                                                        <td>4. Bañar con un chorrito de cerveza al gusto hasta que la carne este lo suficientemente cocida, cuando este doradita y con un color cafecito, retirar del asador.</td>      
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -284,7 +544,50 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/discadanorteña.png">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn8" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal8">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Discada norteña</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1 taza de chorizo</td>   
+                                                        <td>1. Calienta un sartén a fuego medio, y cocina ahí el tocino hasta que suelte la grasita y se dore.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1 taza de tocino</td>   
+                                                        <td>2. Agrega la cebolla y cocina por 3 minutos.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 500 gramos de carne de cerdo</td>   
+                                                        <td>3. Añade la carne de cerdo, el chorizo, la carne de res, las salchichas, los pimientos, y cuando la carne esté cocida, agrega la cerveza.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 500 gramos de carne de res</td>
+                                                        <td>4. Sazona con el comino, la sal y la pimienta y cocina por 5 minutos más.</td>      
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° Pimiento verde</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1 taza de salchicha</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -297,7 +600,49 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="img/blog/cortadillo.jpg">
                             <ul class="featured__item__pic__hover">
-                                <button type="button" class="primary-btn">Ver receta</button>
+                                <button type="button" id="myBtn9" class="primary-btn">Ver receta</button>
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal9">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                            <h4 class="modal-title">Discada norteña</h4>
+                                            <button type="button" class="close" data-dismiss="modal">×</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <table align="center" border="0" cellpadding="30px">
+                                                    <tr>   
+                                                        <th> INGREDIENTES </th> 
+                                                        <th> INSTRUCCIONES </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 500 Gramos Carne de res aguayón, cortado en cuadritos</td>   
+                                                        <td>1. Cuece la carne en la olla exprés con 4 tazas de agua, la media cebolla y la sal durante 1 hora; retira y reserva.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1 Cucharada Manteca de cerdo</td>   
+                                                        <td>2. Licua los tomates con los chiles anchos y reserva. Calienta la manteca y fríe la cebolla rebanada con los jitomates; agrega el resto del agua, el consomé de pollo en polvo y las hierbas de olor. Cuando comience a hervir incorpora la carne cortada en cuadritos con el chile chipotle y el Sazonador Líquido MAGGI® ; tapa y deja que seque un poco. sirve con las tortillas de harina calientes.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 5 Piezas Jitomate cortados en cuadritos</td>   
+                                                        <td>3. Para dar más aroma a la carne se recomienda agregar un par de hojas de laurel, cebolla y ajo al cocinarla.</td>   
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 3 Piezas Chile ancho sin semillas previamente remojados en agua caliente</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1 Cucharadita Hierbas finas</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>° 1/4 Pieza Cebolla rebanada en medias lunas</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -372,8 +717,15 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
-
+    <script>$(document).ready(function(){$("#myBtn").click(function(){$("#myModal").modal();});});</script>
+    <script>$(document).ready(function(){$("#myBtn2").click(function(){$("#myModal2").modal();});});</script>
+    <script>$(document).ready(function(){$("#myBtn3").click(function(){$("#myModal3").modal();});});</script>
+    <script>$(document).ready(function(){$("#myBtn4").click(function(){$("#myModal4").modal();});});</script>
+    <script>$(document).ready(function(){$("#myBtn5").click(function(){$("#myModal5").modal();});});</script>
+    <script>$(document).ready(function(){$("#myBtn6").click(function(){$("#myModal6").modal();});});</script>
+    <script>$(document).ready(function(){$("#myBtn7").click(function(){$("#myModal7").modal();});});</script>
+    <script>$(document).ready(function(){$("#myBtn8").click(function(){$("#myModal8").modal();});});</script>
+    <script>$(document).ready(function(){$("#myBtn9").click(function(){$("#myModal9").modal();});});</script>
 
 </body>
 
