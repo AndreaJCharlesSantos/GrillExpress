@@ -1,0 +1,59 @@
+.imagenes {
+ text-align: center;
+}
+.imagenes img{
+ width:25%;
+ border-radius: 10px;
+}
+
+.izquierda{
+ max-width: 700px;
+ margin: 0 auto;
+ display: flex;
+ background-color: white;
+}
+
+
+.derecha aside h4{
+ font-family: 'Courier New', Courier, monospace;
+}
+
+.derecha aside p{
+ text-align: justify;
+}
+
+.derecha aside img{
+ width: 300px;
+ height: 400px;
+}
+
+.derecha{
+ padding-right: 15px;
+}
+
+section article h3{
+ margin-top: 5px;
+ color:gray;
+ font-size: 10px;
+}
+
+.cont{
+ float: left;
+ margin-right: 10px;
+ width: 150px;
+ height: 200px;
+}
+.izquierda h2{
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+section article p{
+ margin-top: 5px;
+ text-align: justify;
+}
+
+.contenido{
+ padding-left: 50px;
+ padding-right: 50px;
+}

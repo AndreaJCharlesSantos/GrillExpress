@@ -1,0 +1,79 @@
+*{
+
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	box-sizing: border-box;
+	font-family: "Raleway";
+}
+
+.clearfix{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+body{
+	background-color: gray;
+}
+
+form{
+	width: 500px;
+	margin: 100px auto;
+	background-color: white;
+	box-shadow: 0 0 20px brown;
+	padding: 20px;
+
+}
+
+form .form_ctrl{
+	padding: 16px;
+	font-size: 16px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	display: block;
+	width: 100%;
+}
+
+form .form_ctrl:focus{
+	border: 5px solid gold;
+}
+
+form .btn{
+	padding: 16px;
+	font-size: 16px;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	float: right;
+	background-color: orange;
+	color: white;
+	border: none;
+}
+
+form .btn:hover{
+	cursor: pointer;
+}
+
+div .contenedor{
+	width: 1000px;
+	margin: auto;
+	background-color: white;
+	padding: 20px;
+}
+
+
+header{
+	background-color: orange;
+	padding: 14px;
+	display: flex;
+}
+
+div .derecha{
+	width: 15%;
+	float: right;
+}
+
+.alerta{
+	color: red;
+	text-decoration: bold;
+}

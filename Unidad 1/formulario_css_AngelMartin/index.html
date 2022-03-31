@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link rel="stylesheet" href="estilos.css" type="text/css">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <fieldset class ="Tit"></fieldset>
+    <fieldset class="Tit">
+        <h1>Encuesta</h1>
+        <p>Tu correo se registrará al enviar el formulario</p>
+    </fieldset>
+
+    <br>
+
+    <form action="index.html" method="POST">
+        <fieldset class="fid">
+            <label for="nombre">Nombre: </label><br>
+            <input class="inputT" type="text" name="nombre" id="nombre" required minlength="10">
+        </fieldset>
+        <br>
+        <fieldset class="fid">
+         <label>Correo: </label><br>
+         <input class="inputcor" type="text" name="correo" id="correo">
+        </fieldset><br>
+
+        <fieldset class = "fid">
+            <label class="pregunta">¿Que auto prefieres? </label><br><br>
+            <div>
+                <img src="img/chikito.jpg" alt="carro chikito"> 
+                <img src="img/lujoso.jpg" alt="CarroNegro">
+                <img src="img/azul.jpg" alt="MiniCarro"><br>
+            </div>
+            <div class = "opc">
+                <input required type="radio" name="cars" id="cars" value="Carro chikito">
+                <label for="cars">Carro chikito </label>
+                &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;                
+                &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                <input required type="radio" name="cars" id="cars" value="Carro chikito">
+                <label for="cars">Carro Negro </label>
+                &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;                
+                &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;                <input required type="radio" name="cars" id="cars" value="Carro chikito">
+                <label for="cars">Carro Azul </label>
+        </fieldset>
+        <br>
+        <fieldset class="fid">
+            <label class="pregunta">¿Qué dispositivos hay en casa?</label>
+            <br>
+            <input type="checkbox" name="devices" id="devices" value="1">     
+            <label>Tablet </label><br><br>
+            <input type="checkbox" name="devices" id="devices" value="2">     
+            <label>Smartphone </label><br><br>
+            <input type="checkbox" name="devices" id="devices" value="3">     
+            <label>Pc </label><br><br>
+            <input type="checkbox" name="devices" id="devices" value="4">     
+            <label for="devices">Laptop </label><br><br>
+            <input type="checkbox" name="devices" id="devices" value="5">     
+            <label>Otro: </label>
+            <input type="text" name="devices" id="otros">
+        </fieldset>
+        <br>
+        <fieldset class="fid">
+            <label for="career">¿Cual es tu carrera?</label>
+            <br><br>
+            <select name="career" id="carrera" required>
+                <option value="0">Elige</option>
+                <option value="1">ITI</option>
+                <option value="2">LAyGE</option>
+                <option value="3">ITM</option>
+                <option value="4">ISA</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="fid">
+            <label  class="pregunta">Comentrios:</label>
+            <br><br><br>
+            <textarea name="comments" id="comments" cols="80" rows="1" placeholder="Comentrios"></textarea>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="fid">
+            <label class="pregunta">¿Cual es tu nivel de ingles?</label>
+            <br>
+            <div>
+                <div>
+                 &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                    <label class="nivel">1</label>
+                    &emsp14;&emsp14;&emsp14;
+                    <label for="level">2</label>
+                    &emsp14;&emsp14; 
+                    <label for="level">3</label> 
+                    &emsp14;&emsp14;
+                    <label for="level">4</label>
+                    &emsp14;&emsp14;
+                    <label for="level">5</label>   
+                </div>
+                <div>
+                    <div>
+                        <label class="pregunta">Basico</label>
+                        <input type="radio" name="level" id="level">
+                        <input type="radio" name="level" id="level"> 
+                        <input type="radio" name="level" id="level"> 
+                        <input type="radio" name="level" id="level"> 
+                        <input type="radio" name="level" id="level"> 
+                        <label class="pregunta">Avanzado</label> 
+                    </div>           
+            </div> 
+            </div>       
+        </fieldset>
+        <br>
+
+        <fieldset class="fid">
+            <label class="pregunta">Denos su opinion: </label>
+            <br><br>
+            <label class="opi">Mala</label>
+            <label class="opi2">Regular</label>
+            <label class="opi2">Buena</label> 
+            <label class="opi2">Exelente</label>
+            <br><br>
+            <label>Servicio al Cuarto</label>
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14; 
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+            <input type="radio" name="opinions" id="opinions">
+            <br><br>
+            <label for="opinions2"> Reservación</label>
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;  
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14; 
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+            <input type="radio" name="opinions" id="opinions">
+            <br><br>
+            <label for="opinions3">Restaurante</label>
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;  
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14; 
+            <input type="radio" name="opinions" id="opinions">
+            &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+            <input type="radio" name="opinions" id="opinions">
+
+        </fieldset>
+
+        <br>
+
+        <fieldset class="fid">
+            <label class="pregunta">Fecha de Nacimiento:</label><br><br>
+            <input type="date" name="Fecha" id="date" required>
+            <br><br>
+        </fieldset>
+
+        <br>
+        &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+        <input class="enviar" type="submit" value="Enviar">
+
+    </form>
+    
+</body>
+</html>

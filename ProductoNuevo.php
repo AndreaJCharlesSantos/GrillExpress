@@ -140,35 +140,33 @@
                         <h2>Agregar un Nuevo Producto</h2>
                     </div>
                 </div>
-                <div class="">
+                <div class="ContProd">
                     <article>
-                    <form method="POST" action="Agregar.php" enctype="multipart/form-data">
-                          <fieldset>
                             <ol class="lista">
                               <li>
                                 <p   for="nombre">Nombre del Producto
-                                <input class="ob" type="text" autofocus maxlength="20" name="nombre" placeholder="Producto" required title="Este campo es Obligatorio."> </p>
+                                <input class="ob" id="Nombre" type="text" autofocus maxlength="20" name="nombre" placeholder="Producto" required title="Este campo es Obligatorio."> </p>
                               </li>
                               <li>
                                 <p   for="codigo">Código del Producto: 
-                                <input class="ob" type="text" placeholder="Código" maxlength="15" name="cod" required title="Este campo es Obligatorio."></p>
+                                <input class="ob" id="codigo" type="text" placeholder="Código" maxlength="15" name="cod" required title="Este campo es Obligatorio."></p>
                               </li>
                               <li>
                                 <p  >Categoria: </p>
-                                    <select class="Select" name="cat" required title="Este campo es Obligatorio.">
-                                        <option value="carne">Cortes</option>
-                                        <option value="sazon">Sazonadores</option>
-                                        <option value="complemento">Utencilios</option>
+                                    <select id="categoria" type="Select" class="Select" name="cat" required title="Este campo es Obligatorio.">
+                                        <option value="Cortes">Cortes</option>
+                                        <option value="Sazonadores">Sazonadores</option>
+                                        <option value="Utencilios">Utencilios</option>
                                       </select>                                    
                               </li>
                               <br>
                               <li>
                                 <p   for="cantidad">Cantidad en Stock: 
-                                <input class="ob" type="number" value="1" name="cant" required title="Este campo es Obligatorio."></p>
+                                <input class="ob" id="cantidad" type="number" value="1" name="cant" required title="Este campo es Obligatorio."></p>
                               </li>
                               <li>
-                                <p   for="precio" id="precio">Precio: $
-                                <input class="ob" type="text" maxlength="10" name="price" value="0.00" required title="Este campo es Obligatorio."></p>
+                                <p   for="precio">Precio: $
+                                <input class="ob" id="precio" type="text" maxlength="10" name="price" value="0.00" required title="Este campo es Obligatorio."></p>
                               </li>
                               <li>
                                   <p  >Insertar Imagen: </p>
@@ -176,20 +174,13 @@
                               </li>
                             </ol>
                             <br>
-                            <input type="submit" value="Agregar" name="aceptar" class="site-btn">
-                          </fieldset>
-                        </form>
+                            <button type="button" id="enviar" class="site-btn">Agregar</button>
                       </article>
-
-                      <form action="cambiodatospersonales.php" enctype="multipart/form-data" method="post">
-                        <label for="imagen">Imagen:</label> <input id="imagen" name="imagen" size="30" type="file"> 
-                    <input type="submit" value="Cambiar datos">
-                        </form>
                 </div>
             </div>
         </div>
     </section>
-
+        
 
     <!-- Footer Section Begin -->
     <footer class="footer spad">
@@ -260,6 +251,8 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="Producto.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>

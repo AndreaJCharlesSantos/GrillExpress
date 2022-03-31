@@ -2004,7 +2004,16 @@ ol {
 }
 
 
-
+.ContProd{
+	background: rgb(255, 255, 255);
+    border-radius: 0;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
 
 /* */
 
@@ -3229,6 +3238,11 @@ ol {
 
 /* Andrea */
 /*Contenedor del blog*/
+
+.contProduct{
+	text-align: center;
+}
+
 
 .container-blog textarea {
 	width: 100%;
