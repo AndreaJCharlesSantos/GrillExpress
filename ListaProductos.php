@@ -144,11 +144,7 @@ require ('Conexion.php');
                         <h2>Lista de productos</h2>
                     </div>
                 </div>
-<<<<<<< HEAD
                 <table class="table align-middle" id="Productos">
-=======
-                <table class="table align-middle">
->>>>>>> 3710885a539277f27c718d3c64c4a14d0675f874
                     <thead>
                       <tr>
                         <th scope="col">Código</th>
