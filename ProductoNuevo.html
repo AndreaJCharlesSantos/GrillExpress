@@ -1,7 +1,3 @@
-<?php
-require ('Conexion.php');
-
-?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -35,7 +31,6 @@ require ('Conexion.php');
 }
     </style>
 </head>
-
 
 <body>
     <!-- Page Preloder -->
@@ -141,46 +136,50 @@ require ('Conexion.php');
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact__form__title">
-                        <h2>Lista de productos</h2>
+                        <h2>Agregar un Nuevo Producto</h2>
                     </div>
                 </div>
-<<<<<<< HEAD
-                <table class="table align-middle" id="Productos">
-=======
-                <table class="table align-middle">
->>>>>>> 3710885a539277f27c718d3c64c4a14d0675f874
-                    <thead>
-                      <tr>
-                        <th scope="col">Código</th>
-                        <th scope="col">Producto</th>
-                        <th scope="col">Categoría</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <?php $productos="Select * from producto";
-                        $resultado=mysqli_query($conexion,$productos);
-                        while($row = mysqli_fetch_array($resultado)) {?>
-                            <tr id="<?php echo $row["codigo"]?>">
-                                <td><?php echo $row["codigo"]?></td>
-                                <td><?php echo $row["nombre"]?></td>
-                                <td><?php echo $row["categoria"]?></td>
-                                <td><?php echo "$".$row["Precio"]?></td>
-                                <td><?php echo $row["Cantidad"]?></td>
-                                <td >
-                                <a href="EdicionProducto.php?id=<?php echo $row['codigo'];?>" type="button" class="btn btn-link btn-sm px-4" data-ripple-color="dark">
-                            <i class="icon_pencil-edit"></i></a>
-                          <button type="button" class="btn btn-link btn-sm px-4" id="Delete" data-ripple-color="dark">
-                            <i class=" icon_trash"></i></button>
-                                </td>
-                            </tr>
-                        <?php }
-                        mysqli_free_result($resultado);
-                        ?>
-                    </tbody>
-                  </table>
+                <div class="">
+                    <article>
+                        <form action="#">
+                          <fieldset>
+                            <ol class="lista">
+                              <li>
+                                <p   for="nombre">Nombre del Producto
+                                <input class="ob" type="text" autofocus maxlength="20" placeholder="Producto" required title="Este campo es Obligatorio."> </p>
+                              </li>
+                              <li>
+                                <p   for="codigo">Código del Producto: 
+                                <input class="ob" type="text" placeholder="Código" maxlength="15" required title="Este campo es Obligatorio."></p>
+                              </li>
+                              <li>
+                                <p  >Categoria: </p>
+                                    <select class="Select" required title="Este campo es Obligatorio.">
+                                        <option value="carne">Cortes</option>
+                                        <option value="sazon">Sazonadores</option>
+                                        <option value="complemento">Utencilios</option>
+                                      </select>                                    
+                              </li>
+                              <br>
+                              <li>
+                                <p   for="cantidad">Cantidad en Stock: 
+                                <input class="ob" type="number" value="1" required title="Este campo es Obligatorio."></p>
+                              </li>
+                              <li>
+                                <p   for="precio" id="precio">Precio: $
+                                <input class="ob" type="text" maxlength="10" value="0.00" required title="Este campo es Obligatorio."></p>
+                              </li>
+                              <li>
+                                  <p  >Insertar Imagen: </p>
+                                <input class="ob" type="file" name="imagen" required title="Este campo es Obligatorio."/>   
+                              </li>
+                            </ol>
+                            <br>
+                            <input type="submit" onclick="pregunta()" value="Agregar" name="aceptar" class="site-btn">
+                          </fieldset>
+                        </form>
+                      </article>
+                </div>
             </div>
         </div>
     </section>
@@ -254,13 +253,7 @@ require ('Conexion.php');
     </footer>
     <!-- Footer Section End -->
 
-
     <!-- Js Plugins -->
-<<<<<<< HEAD
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="Delete.js"></script>
-=======
->>>>>>> 3710885a539277f27c718d3c64c4a14d0675f874
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -269,7 +262,6 @@ require ('Conexion.php');
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/Coma.js"></script>
-    <script src="js/CargarT.js"></script>
 
 </body>
 
