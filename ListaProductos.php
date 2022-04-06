@@ -166,10 +166,10 @@ require ('Conexion.php');
                                 <td><?php echo "$".$row["Precio"]?></td>
                                 <td><?php echo $row["Cantidad"]?></td>
                                 <td >
-                                <a href="EdicionProducto.php?id=<?php echo $row['codigo'];?>" type="button" class="btn btn-link btn-sm px-4" data-ripple-color="dark">
+                                <a href="EdicionProducto.php?id=<?php echo $row['codigo'];?>" id="edit" class="btn btn-link btn-sm px-4" data-ripple-color="dark">
                             <i class="icon_pencil-edit"></i></a>
-                          <button type="button" class="btn btn-link btn-sm px-4" id="Delete" data-ripple-color="dark">
-                            <i class=" icon_trash"></i></button>
+                            <td><button id="<?php echo $row['codigo'] ?>" type="button" class="btn btn-link btn-sm px-4" data-ripple-color="dark"><i class=" icon_trash"></i></button></td>
+
                                 </td>
                             </tr>
                         <?php }
@@ -252,11 +252,8 @@ require ('Conexion.php');
 
 
     <!-- Js Plugins -->
-<<<<<<< HEAD
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="Delete.js"></script>
-=======
->>>>>>> 3710885a539277f27c718d3c64c4a14d0675f874
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
