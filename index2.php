@@ -91,7 +91,7 @@
                             <ul>
                                 <li class="active"><a href="./index.html">Catálogo</a></li>
                                 <li><a href="./blog.html">Receta</a></li>
-                                <li><a href="./login.html">Cerrar sesión</a></li>
+                                <li><a href="./index.php">Cerrar sesión</a></li>
                                 <li><a href="#">Acciones</a>
                                     <ul class="header__menu__dropdown">
                                         <li><a href="./PublicarBlog.html">Añadir receta</a></li>

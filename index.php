@@ -53,9 +53,9 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Catálogo</a></li>
+                <li class="active"><a href="./index.php">Catálogo</a></li>
                 <li><a href="./blog.html">Receta</a></li>
-                <li><a href="./login.html">Iniciar sesión</a></li>
+                <li><a href="./login.php">Iniciar sesión</a></li>
             </ul>
             </ul>
         </nav>
@@ -84,7 +84,7 @@
                         <ul>
                             <li class="active"><a href="./index.html">Catálogo</a></li>
                             <li><a href="./blog.html">Receta</a></li>
-                            <li><a href="./login.html">Iniciar sesión</a></li>
+                            <li><a href="./login.php">Iniciar sesión</a></li>
                         </ul>
                     </nav>
                 </div>

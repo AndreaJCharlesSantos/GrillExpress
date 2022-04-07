@@ -4,7 +4,7 @@ $bd = 'grillgo';
     $servidor = 'localhost';
     $usuario='root';
     $contrasena='';
-    
+    var_dump($_POST);
     #Creamos una conexión a la base de datos
     $conexion=mysqli_connect($servidor,$usuario,$contrasena,$bd);
 
@@ -46,7 +46,7 @@ if($nmyusuario != 0)
       //nombre del usuario logueado. 
       //Direccionamos a nuestra página principal del sistema. 
       if($fila[1] === 'Admin'){
-        header ("Location: index2.html"); 
+        header ("Location: index2.php"); 
       }else{
       header ("Location: index.php"); 
     }
@@ -58,7 +58,7 @@ if($nmyusuario != 0)
 }
 else
 { 
-    echo"<script>alert('El usuario no existe.'); window.location.href=\"index.php\"</script>"; 
+    echo"<script>alert('El usuario no existe.'); </script>"; 
 } 
 mysql_close($conexion); 
 ?>

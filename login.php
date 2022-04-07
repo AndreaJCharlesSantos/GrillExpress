@@ -95,16 +95,16 @@
         <div class="col" style="width: 300px; background-color: #ffffff; border-radius: 5px;"  >
             <div class="form-cont" style="margin-top: 30px; margin-bottom: 30px; ">
                 <!-- <h2>Iniciar sesión</h2> -->
-                <form >
-                    <div class="form-group">
+                <form  action="Control_Sesion.php" method="post" id="form">
+                    <div class="form-group" >
                         
                       <label for="exampleInputEmail1">Correo Electronico*</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jhondue@example.com"required>
+                      <input type="email" class="form-control" name="c" id="c" aria-describedby="emailHelp" placeholder="Jhondue@example.com"required>
                       
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Contraseña*</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña" required>
+                      <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingresa tu contraseña" required>
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
