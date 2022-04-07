@@ -1,4 +1,6 @@
-$('#enviar').on('click',function(event){
+$('#enviar').click(enviar);
+
+function enviar(enviar){
 	var file_data = $("#imagen").prop("files")[0];
     var n=file_data.name;   
     var mensaje="Se agrego el Producto.";
@@ -18,8 +20,9 @@ $('#enviar').on('click',function(event){
             console.log(dataA);
             alert(mensaje);
           }
-    })
-});
+    });
+}
+
 
 
 $('#act2').click(actualizar);
