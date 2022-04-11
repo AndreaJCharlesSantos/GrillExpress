@@ -1,6 +1,8 @@
 <?php
 require ('Conexion.php');
+// require ('Control_sesion.php');
 
+// echo $user;
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -233,11 +235,12 @@ require ('Conexion.php');
                         while($row = mysqli_fetch_array($resultado)) {?>                
                 <div class="col-lg-3 col-md-4 col-sm-6 mix extra">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/lomobajo.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="<?php echo $row["Imagen"];?>">
                             <ul class="featured__item__pic__hover">
                                 <!-- <li><a href="#"><i class="fa fa-heart"></i></a></li> -->
                                 <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
-                                <li><a href="AccionCarta.php?action=addToCart&id=<?php echo $row["codigo"]; ?>"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><button onclick="enviar(<?php echo $row['codigo']?>)" type="button" class="btn btn-link btn-sm px-4 " data-ripple-color="dark">
+                            <i class="fa fa-shopping-cart"></i></button></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
@@ -380,6 +383,8 @@ require ('Conexion.php');
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="carrito.js"></script>
+    <!-- <script type="text/javascript" src="carrito.js"></script> -->
 
 
 

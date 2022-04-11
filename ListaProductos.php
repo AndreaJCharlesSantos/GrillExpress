@@ -166,9 +166,9 @@ require ('Conexion.php');
                                 <td><?php echo "$".$row["Precio"]?></td>
                                 <td><?php echo $row["Cantidad"]?></td>
                                 <td >
-                                <a href="EdicionProducto.php?id=<?php echo $row['codigo'];?>" id="edit" class="btn btn-link btn-sm px-4" data-ripple-color="dark">
+                                <a href="EdicionProducto.php?id=<?php echo $row['codigo'];?>" id="edit" class="btn btn-secondary btn-sm" data-ripple-color="dark">
                             <i class="icon_pencil-edit"></i></a>
-                            <td><button id="<?php echo $row['codigo'] ?>" type="button" class="btn btn-link btn-sm px-4" data-ripple-color="dark"><i class=" icon_trash"></i></button></td>
+                            <td><button id="<?php echo $row['codigo'] ?>" type="button" class="btn btn-danger btn-sm" data-ripple-color="dark"><i class=" icon_trash"></i></button></td>
 
                                 </td>
                             </tr>

@@ -1,6 +1,6 @@
 <?php 
 /* A continuación, realizamos la conexión con nuestra base de datos en MySQL */ 
-$bd = 'grillgo';
+$bd = 'grill';
     $servidor = 'localhost';
     $usuario='root';
     $contrasena='';
