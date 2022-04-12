@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2022 a las 15:55:38
+-- Tiempo de generación: 12-04-2022 a las 04:19:54
 -- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.0.15
+-- Versión de PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,6 +36,17 @@ CREATE TABLE `carrito` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `detalle_carito`
+--
+
+CREATE TABLE `detalle_carito` (
+  `id_carrito` int(10) UNSIGNED NOT NULL,
+  `codigo_producto` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `detalle_orden`
 --
 
@@ -43,6 +54,13 @@ CREATE TABLE `detalle_orden` (
   `codigo_orden` int(10) UNSIGNED NOT NULL,
   `codigo_producto` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_orden`
+--
+
+INSERT INTO `detalle_orden` (`codigo_orden`, `codigo_producto`) VALUES
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -55,6 +73,14 @@ CREATE TABLE `orden_compra` (
   `id_cliente` int(10) UNSIGNED NOT NULL,
   `total` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `orden_compra`
+--
+
+INSERT INTO `orden_compra` (`codigo`, `id_cliente`, `total`) VALUES
+(1, 1, 50),
+(2, 2, 60);
 
 -- --------------------------------------------------------
 
@@ -76,9 +102,7 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`codigo`, `nombre`, `Cantidad`, `Precio`, `Imagen`, `categoria`) VALUES
-(823122, 'Aguja', '1', '5,454.45', 'uploads/aguja.jpg', 'Cortes'),
-(832323, 'fewfw', '1', '434.34', 'uploads/aguja.jpg', 'Cortes'),
-(4538223, 'Tenedores', '14333', '43.34', 'uploads/aguja.jpg', 'Utencilios');
+(2, 'Aguja', '3', '150.00', 'uploads/aguja.jpg', 'Cortes');
 
 -- --------------------------------------------------------
 
@@ -96,6 +120,14 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `correo`, `Direccion`, `contraseña`) VALUES
+(1, 'Admin', 'Admin', 'admin@grillgo.com', '22 y 24 carrera', '12345'),
+(2, 'cliente', 'cabeza de vaca', 'cliente@tam.gob.mx', 'torre efel 714 fracc. las torres', '12345');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -105,6 +137,13 @@ CREATE TABLE `usuario` (
 ALTER TABLE `carrito`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_cliente` (`id_cliente`),
+  ADD KEY `codigo_producto` (`codigo_producto`);
+
+--
+-- Indices de la tabla `detalle_carito`
+--
+ALTER TABLE `detalle_carito`
+  ADD KEY `id_carrito` (`id_carrito`),
   ADD KEY `codigo_producto` (`codigo_producto`);
 
 --
@@ -147,13 +186,13 @@ ALTER TABLE `carrito`
 -- AUTO_INCREMENT de la tabla `orden_compra`
 --
 ALTER TABLE `orden_compra`
-  MODIFY `codigo` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `codigo` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
@@ -165,6 +204,13 @@ ALTER TABLE `usuario`
 ALTER TABLE `carrito`
   ADD CONSTRAINT `carrito_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `usuario` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `carrito_ibfk_2` FOREIGN KEY (`codigo_producto`) REFERENCES `producto` (`codigo`) ON DELETE CASCADE;
+
+--
+-- Filtros para la tabla `detalle_carito`
+--
+ALTER TABLE `detalle_carito`
+  ADD CONSTRAINT `detalle_carito_ibfk_1` FOREIGN KEY (`id_carrito`) REFERENCES `carrito` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `detalle_carito_ibfk_2` FOREIGN KEY (`codigo_producto`) REFERENCES `producto` (`codigo`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `detalle_orden`
