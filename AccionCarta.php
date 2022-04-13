@@ -1,10 +1,15 @@
 <?php
+
+/*
+* Aquí realizamos la acción de adición a la base de datos: "detalle_carito" 
+* 
+*/
 require ('Conexion.php');
 var_dump($_POST);
 $codigoP=$_POST['codigoP'];
-$codigoO=$_POST['codigoO'];
+// $codigoO=$_POST['codigoO'];
 echo ($codigoP);
-$sql = "INSERT INTO detalle_orden (codigo_orden,codigo_producto) VALUES (1,'$codigoP');";
+$sql = "INSERT INTO detalle_carito (id_carrito,codigo_producto) VALUES (1,'$codigoP');";
 if(mysqli_query($conexion,$sql)){
     echo '<script language="javascript">alert("Se ha agregado correctamente");</script>';
 }

@@ -1,8 +1,8 @@
 
 /*
 * Recibe el código de un producto y lo agrega al carrito de compras.
-* @param {number} codigoProducto - Código del producto a agregar.
-* @param {number} codigoOrden - Código de la orden a agregar.
+* @param {number} id_carrito - Código del carrito de compras.
+* @param {number} codigo_producto - Código del producto a agregar.
 *
 */
 function enviar(codigo){

@@ -237,8 +237,6 @@ require ('Conexion.php');
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?php echo $row["Imagen"];?>">
                             <ul class="featured__item__pic__hover">
-                                <!-- <li><a href="#"><i class="fa fa-heart"></i></a></li> -->
-                                <!-- <li><a href="#"><i class="fa fa-retweet"></i></a></li> -->
                                 <li><button onclick="enviar(<?php echo $row['codigo']?>)" type="button" class="btn btn-link btn-sm px-4 " data-ripple-color="dark">
                             <i class="fa fa-shopping-cart"></i></button></li>
                             </ul>
