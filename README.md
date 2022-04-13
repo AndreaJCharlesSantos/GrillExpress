@@ -12,7 +12,7 @@ Color base (fuerte): #ff9052 \\
   3. Arturo
   4. Ezer
   5. Aldo
-  6. Carlos uwu
+  6. Carlos
 
 ## Frontend:
 
