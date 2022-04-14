@@ -18,3 +18,18 @@ function enviar(codigo){
         }
     })
 }
+
+//TODO: implementar esta función para la obtención del carrito por medio de AJAX
+
+/*function show_datos(carrito){
+    $.ajax({
+        url: 'Mostrar_Carrito.php',
+        type: 'get',
+        data:{
+            
+        },
+        success: function(data){
+            alert(data);
+        }
+    })
+}*/

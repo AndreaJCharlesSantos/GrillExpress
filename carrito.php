@@ -1,4 +1,5 @@
 <?php
+require ('Conexion.php');
 ?>
 
 <!DOCTYPE html>
@@ -116,7 +117,7 @@
                 <div class="col-lg-12">
                     <div class="compra">
                         <h3>CARRITO DE:</h3>
-                        <h4>USUARIO</h4>
+                        <h4><php?></php></h4>
                         <div class="compra-tabla">
                             <table class="tabla">
                                 <thead>
@@ -128,33 +129,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="lista-productos" scope="row">
-                                            <img src="img/lista-productos/arrachera.jpg">
-                                            <label>Arrachera 500gr</label>
-                                        </td>
-                                        <td class="cantidad-producto">$175</td>
-                                        <td class="cantidad-producto">2</td>
-                                        <td class="cantidad-producto">$350</td>
+                                <?php $carrito="Select * from detalle_carito where id_carrito=1";
+                                $resultado=mysqli_query($conexion,$carrito);
+                                while($row = mysqli_fetch_array($resultado)) {?>
+                                    <?php $producto= "Select * from producto where codigo=". $row['codigo_producto'];
+                                    $resultado_producto=mysqli_query($conexion,$producto);
+                                    while($fila = mysqli_fetch_array($resultado_producto)){?>
+                                    <tr id="<?php echo $fila["codigo"]?>">
+                                        <td><?php echo $fila["nombre"];?> <img src=<?php echo $fila["Imagen"];?>></td>
+                                        <td><?php echo "$".$fila["Precio"]?></td>
                                     </tr>
-                                    <tr>
-                                        <td class="lista-productos" scope="row">
-                                            <img src="img/lista-productos/harina.jpg">
-                                            <label>Tortillas de Harina 1kg</label>
-                                        </td>
-                                        <td class="cantidad-producto">$90</td>
-                                        <td class="cantidad-producto">1</td>
-                                        <td class="cantidad-producto">$90</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="lista-productos" scope="row">
-                                            <img src="img/lista-productos/carbon.jpg">
-                                            <label>Carbon Vegetal 3kg</label>
-                                        </td>
-                                        <td class="cantidad-producto">$65</td>
-                                        <td class="cantidad-producto">1</td>
-                                        <td class="cantidad-producto">$175</td>
-                                    </tr>
+                                    <?php }mysqli_free_result($resultado_producto);?>
+                                <?php }
+                                mysqli_free_result($resultado);
+                                ?>
                                 </tbody>
                             </table>
                         </div>
