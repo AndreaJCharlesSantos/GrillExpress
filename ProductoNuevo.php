@@ -60,13 +60,13 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Catálogo</a></li>
+                <li class="active"><a href="./index.php">Catálogo</a></li>
                 <li><a href="./blog.html">Receta</a></li>
-                <li><a href="./login.html">Iniciar sesión</a></li>
+                <li><a href="./login.php">Iniciar sesión</a></li>
                 <li><a href="#">Acciones</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="./PublicarBlog.html">Añadir receta</a></li>
-                        <li><a href="./ProductoNuevo.html">Añadir producto</a></li>
+                        <li><a href="./PublicarBlog.php">Añadir receta</a></li>
+                        <li><a href="./ProductoNuevo.php">Añadir producto</a></li>
                     </ul>
                 </li>
             </ul>
@@ -89,20 +89,20 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logitor.png" alt=""></a>
+                        <a href="./index.php"><img src="img/logitor.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <div class="header2">
                             <ul>
-                                <li class="active"><a href="./index.html">Catálogo</a></li>
+                                <li class="active"><a href="./index.php">Catálogo</a></li>
                                 <li><a href="./blog.html">Receta</a></li>
-                                <li><a href="./login.html">Cerrar sesión</a></li>
+                                <li><a href="./login.php">Cerrar sesión</a></li>
                                 <li><a href="#">Acciones</a>
                                     <ul class="header__menu__dropdown">
-                                        <li><a href="./PublicarBlog.html">Añadir receta</a></li>
-                                        <li><a href="./ProductoNuevo.html">Añadir producto</a></li>
+                                        <li><a href="./PublicarBlog.php">Añadir receta</a></li>
+                                        <li><a href="./ProductoNuevo.php">Añadir producto</a></li>
                                     </ul>
                                 </li>
 
@@ -174,7 +174,7 @@
                               </li>
                             </ol>
                             <br>
-                            <button type="button" id="enviar" class="site-btn">Agregar</button>
+                            <button  type="button" onclick="enviar()" class="site-btn">Agregar</button>
                       </article>
                 </div>
             </div>
@@ -189,7 +189,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a href="./index.php"><img src="img/logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Address: 60-49 Road 11378 New York</li>
