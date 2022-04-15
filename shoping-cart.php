@@ -1,8 +1,8 @@
 <?php
-require ('Conexion.php');
-// require ('Control_sesion.php');
-
-// echo $user;
+include 'Conexion.php';
+session_start();
+$_USER = $_SESSION['id'];
+// echo ($_USER);
 ?>
 
 <!DOCTYPE html>
@@ -150,8 +150,9 @@ require ('Conexion.php');
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php $carrito="Select * from detalle_carito where id_carrito=1";
-                                $resultado=mysqli_query($conexion,$carrito);
+                            <?php $carrito="Select id from carrito where id_cliente='$_USER'";?>
+                            <?php $detalle_carrito="Select * from detalle_carito where id_carrito='$carrito'";
+                                $resultado=mysqli_query($conexion,$detalle_carrito);
                                 while($row = mysqli_fetch_array($resultado)) {?>
                                     <?php $producto= "Select * from producto where codigo=". $row['codigo_producto'];
                                     $resultado_producto=mysqli_query($conexion,$producto);
