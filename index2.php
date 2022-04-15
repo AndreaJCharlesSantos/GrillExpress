@@ -1,4 +1,12 @@
+<?php
+include 'Conexion.php';
+session_start();
+$_USER = $_SESSION['id'];
+// echo ($_USER);
+?>
+
 <!DOCTYPE html>
+
 <html lang="zxx">
 
 <head>

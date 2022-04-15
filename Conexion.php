@@ -1,5 +1,5 @@
 <?php
-    $bd = 'grillgo';
+    $bd = 'grill';
     $servidor = 'localhost';
     $usuario='root';
     $contrasena='';
