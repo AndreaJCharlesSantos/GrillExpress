@@ -1,3 +1,10 @@
+<?php
+require ('Conexion.php');
+// require ('Control_sesion.php');
+
+// echo $user;
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -143,63 +150,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="img/lista-productos/arrachera.jpg" alt="">
-                                        <h5>Arrachera 500gr</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $175.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="2">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $350.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="img/lista-productos/harina.jpg" alt="">
-                                        <h5>Tortillas de Harina 1kg</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $90.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $90.00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="shoping__cart__item">
-                                        <img src="img/lista-productos/carbon.jpg" alt="">
-                                        <h5>Carbon Vegetal 3kg</h5>
-                                    </td>
-                                    <td class="shoping__cart__price">
-                                        $65.00
-                                    </td>
-                                    <td class="shoping__cart__quantity">
-                                        <div class="quantity">
-                                            <div class="pro-qty">
-                                                <input type="text" value="1">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="shoping__cart__total">
-                                        $175.00
-                                    </td>
-                                </tr>
+                            <?php $carrito="Select * from detalle_carito where id_carrito=1";
+                                $resultado=mysqli_query($conexion,$carrito);
+                                while($row = mysqli_fetch_array($resultado)) {?>
+                                    <?php $producto= "Select * from producto where codigo=". $row['codigo_producto'];
+                                    $resultado_producto=mysqli_query($conexion,$producto);
+                                    while($fila = mysqli_fetch_array($resultado_producto)){?>
+                                    <tr id="<?php echo $fila["codigo"]?>">
+                                        <td><?php echo $fila["nombre"];?> <img width="200px" height="200px" src=<?php echo $fila["Imagen"];?>></td>
+                                        <td><?php echo "$".$fila["Precio"]?></td>
+                                    </tr>
+                                    <?php }mysqli_free_result($resultado_producto);?>
+                                <?php }
+                                mysqli_free_result($resultado);
+                                ?>
                             </tbody>
                         </table>
                     </div>
