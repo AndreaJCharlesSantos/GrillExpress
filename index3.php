@@ -1,3 +1,9 @@
+<?php
+require ('Conexion.php');
+// require ('Control_sesion.php');
+
+// echo $user;
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -53,15 +59,9 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.html">Catálogo</a></li>
+                <li class="active"><a href="./index.php">Catálogo</a></li>
                 <li><a href="./blog.html">Receta</a></li>
-                <li><a href="./login.html">Iniciar sesión</a></li>
-                <li><a href="#">Acciones</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./PublicarBlog.html">Añadir receta</a></li>
-                        <li><a href="./ProductoNuevo.html">Añadir producto</a></li>
-                    </ul>
-                </li>
+                <li><a href="./login.php">Iniciar sesión</a></li>
             </ul>
             </ul>
         </nav>
@@ -87,21 +87,11 @@
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
-                        <div class="header2">
-                            <ul>
-                                <li class="active"><a href="./index.html">Catálogo</a></li>
-                                <li><a href="./blog.html">Receta</a></li>
-                                <li><a href="logout.php">Cerrar sesión</a></li>
-                                <li><a href="#">Acciones</a>
-                                    <ul class="header__menu__dropdown">
-                                        <li><a href="./PublicarBlog.html">Añadir receta</a></li>
-                                        <li><a href="./ProductoNuevo.html">Añadir producto</a></li>
-                                    </ul>
-                                </li>
-
-    
-                            </ul>
-                        </div>
+                        <ul>
+                            <li class="active"><a href="./index.html">Catálogo</a></li>
+                            <li><a href="./blog.html">Receta</a></li>
+                            <li><a href="logout.php">Cerrar sesión</a></li>
+                        </ul>
                     </nav>
                 </div>
                 <div class="col-lg-3">
@@ -171,7 +161,7 @@
                             <!-- <span>FRUIT FRESH</span> -->
                             <h2>GrillExpress</h2>
                             <!-- <p>LA CALIDAD DEL NORTE</p> -->
-                            <a href="#categories" class="primary-btn">Comprar ahora</a>
+                            <a href="shop-grid.html" class="primary-btn">Comprar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -240,149 +230,27 @@
 
 
             <div class="row featured__filter">
+             <?php $productos="Select * from producto";
+                        $resultado=mysqli_query($conexion,$productos);
+                        while($row = mysqli_fetch_array($resultado)) {?>                
                 <div class="col-lg-3 col-md-4 col-sm-6 mix extra">
                     <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/lomobajo.jpg">
+                        <div class="featured__item__pic set-bg" data-setbg="<?php echo $row["Imagen"];?>">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                <li><button onclick="enviar(<?php echo $row['codigo']?>)" type="button" class="btn btn-link btn-sm px-4 " data-ripple-color="dark">
+                            <i class="fa fa-shopping-cart"></i></button></li>
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">Lomo bajo</a></h6>
-                            <h5>$160.00</h5>
+                            <h6><a href="#"><?php echo $row["nombre"]?></a></h6>
+                            <h5><?php echo "$".$row["Precio"]?></h5>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mix primeraa">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/cadera.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Cadera</a></h6>
-                            <h5>$150.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix primeraa">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/tapilla.png">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Tapilla</a></h6>
-                            <h5>$150.00</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mix primerab">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/aguja.png">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Aguja</a></h6>
-                            <h5>$150.00</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mix primerab">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/espaldilla.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Espaldilla</a></h6>
-                            <h5>$150.00</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mix primerab">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/rabillo.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Rabillo</a></h6>
-                            <h5>$150.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix segunda">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/aleta.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Aleta</a></h6>
-                            <h5>$150.00</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mix tercera">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/costilla.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Costilla</a></h6>
-                            <h5>$150.00</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mix tercera">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/morrillo.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">morrillo</a></h6>
-                            <h5>$150.00</h5>
-                        </div>
-                    </div>
-                </div>
+                <?php }
+                        mysqli_free_result($resultado);
+                ?>                
             </div>
-        </div>
     </section>
     <!-- Featured Section End -->
     
@@ -513,6 +381,8 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="carrito.js"></script>
+    <!-- <script type="text/javascript" src="carrito.js"></script> -->
 
 
 

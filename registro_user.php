@@ -1,14 +1,4 @@
-
 <?php
-// Initialize the session
-session_start();
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: welcome.php");
-  exit;
-}
- 
 // Include config file
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
@@ -26,81 +16,87 @@ if($link === false){
 }
  
 // Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = "";
+$username = $password = $confirm_password = "";
+$username_err = $password_err = $confirm_password_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-    // Check if username is empty
+    // Validate username
     if(empty(trim($_POST["username"]))){
-        $username_err = "Por favor ingrese su usuario.";
+        $username_err = "Por favor ingrese un usuario.";
     } else{
-        $username = trim($_POST["username"]);
-    }
-    
-    // Check if password is empty
-    if(empty(trim($_POST["password"]))){
-        $password_err = "Por favor ingrese su contraseña.";
-    } else{
-        $password = trim($_POST["password"]);
-    }
-    
-    // Validate credentials
-    if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, correo, contraseña, nombre FROM usuario WHERE correo = ?";
+        $sql = "SELECT id FROM usuario WHERE nombre = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             
             // Set parameters
-            $param_username = $username;
-
-            
+            $param_username = trim($_POST["username"]);
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
-                // Store result
+                /* store result */
                 mysqli_stmt_store_result($stmt);
                 
-                // Check if username exists, if yes then verify password
-                if(mysqli_stmt_num_rows($stmt) == 1){                    
-                    // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $name);
-                    
-                    if(mysqli_stmt_fetch($stmt)){
-                        echo $password . $hashed_password;
-                        if($password === $hashed_password){
-                            // Password is correct, so start a new session
-                            session_start();
-                            
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
-                            $_SESSION["nombre"] = $name;                           
-                            
-                            if($name === "Admin"){
-                            header("location: index2.php");
-                            }else{
-                                header("location: index3.php");  
-                            }
-                        } else{
-                            // Display an error message if password is not valid
-                            $password_err = "La contraseña que has ingresado no es válida.";
-                        }
-                    }
+                if(mysqli_stmt_num_rows($stmt) == 1){
+                    $username_err = "Este usuario ya fue tomado.";
                 } else{
-                    // Display an error message if username doesn't exist
-                    $username_err = "No existe cuenta registrada con ese nombre de usuario.";
+                    $username = trim($_POST["username"]);
                 }
             } else{
-                echo "Algo salió mal, por favor vuelve a intentarlo.";
+                echo "Al parecer algo salió mal.";
             }
         }
+         
+        // Close statement
+        mysqli_stmt_close($stmt);
+    }
+    
+    // Validate password
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Por favor ingresa una contraseña.";     
+    } elseif(strlen(trim($_POST["password"])) < 6){
+        $password_err = "La contraseña al menos debe tener 6 caracteres.";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate confirm password
+    if(empty(trim($_POST["confirm_password"]))){
+        $confirm_password_err = "Confirma tu contraseña.";     
+    } else{
+        $confirm_password = trim($_POST["confirm_password"]);
+        if(empty($password_err) && ($password != $confirm_password)){
+            $confirm_password_err = "No coincide la contraseña.";
+        }
+    }
+    
+    // Check input errors before inserting in database
+    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
+        // Prepare an insert statement
+        $sql = "INSERT INTO usuario (nombre, apellido, correo, direccion, contraseña) VALUES ('prueba','prueba',?,'domicilio ficticio', ?)";
+         
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            
+            // Set parameters
+            $param_username = $username;
+            $param_password = $password;
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Redirect to login page
+                header("location: login.php");
+            } else{
+                echo "Algo salió mal, por favor inténtalo de nuevo.";
+            }
+        }
+         
         // Close statement
         mysqli_stmt_close($stmt);
     }
@@ -109,7 +105,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 ?>
-
 
 
 <!doctype html>
@@ -171,7 +166,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.php"><img src="img/logitor.png" alt=""></a>
+                        <a href="./index.html"><img src="img/logitor.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -188,7 +183,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="carrito.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
                         <div class="header__cart__price">Artículo: <span>$150.00</span></div>
 
@@ -208,22 +203,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="col"></div>
         <div class="col" style="width: 300px; background-color: #ffffff; border-radius: 5px;"  >
             <div class="form-cont" style="margin-top: 30px; margin-bottom: 30px; ">
-                <!-- <h2>Iniciar sesión</h2> -->
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">   
+            <div class="form-group ">
+                <label>Nombre</label>
+                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"></span>
+            </div>  
+            <div class="form-group ">
+                <label>Apellido</label>
+                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"></span>
+            </div> 
+            <div class="form-group ">
+                <label>Direccion</label>
+                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"></span>
+            </div> 
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Usuario</label>
+                <label>Correo</label>
                 <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
+            </div>  
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>Contraseña</label>
-                <input type="password" name="password" class="form-control">
+                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
                 <span class="help-block"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                <label>Confirmar Contraseña</label>
+                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
+                <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Ingresar">
+                <input type="reset" class="btn btn-default" value="Borrar">
             </div>
-            <p>¿No tienes una cuenta? <a href="registro_user.php">Regístrate ahora</a>.</p>
+            <p>¿Ya tienes una cuenta? <a href="login.php">Ingresa aquí</a>.</p>
         </form>
 
             </div>
