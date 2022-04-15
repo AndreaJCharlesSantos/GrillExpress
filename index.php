@@ -1,8 +1,8 @@
 <?php
-require ('Conexion.php');
-// require ('Control_sesion.php');
-
-// echo $user;
+include 'Conexion.php';
+// session_start();
+// $_USER = $_SESSION['id'];
+// echo ($_USER);
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -237,7 +237,7 @@ require ('Conexion.php');
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="<?php echo $row["Imagen"];?>">
                             <ul class="featured__item__pic__hover">
-                                <li><button onclick="enviar(<?php echo $row['codigo']?>)" type="button" class="btn btn-link btn-sm px-4 " data-ripple-color="dark">
+                                <li><button onclick="enviar(<?php echo $row['codigo']?>,<?php echo $_USER ?>)" type="button" class="btn btn-link btn-sm px-4 " data-ripple-color="dark">
                             <i class="fa fa-shopping-cart"></i></button></li>
                             </ul>
                         </div>

@@ -7,9 +7,11 @@
 require ('Conexion.php');
 var_dump($_POST);
 $codigoP=$_POST['codigoP'];
+$usuario=$_POST['usuario'];
 // $codigoO=$_POST['codigoO'];
 echo ($codigoP);
-$sql = "INSERT INTO detalle_carito (id_carrito,codigo_producto) VALUES (1,'$codigoP');";
+echo ($usuario);
+$sql = "INSERT INTO detalle_carito (id_carrito,codigo_producto) VALUES ('$usuario','$codigoP');";
 if(mysqli_query($conexion,$sql)){
     echo '<script language="javascript">alert("Se ha agregado correctamente");</script>';
 }

@@ -5,15 +5,17 @@
 * @param {number} codigo_producto - Código del producto a agregar.
 *
 */
-function enviar(codigo){
+function enviar(codigo, usuario){
+    // alert(codigo,usuario);
     $.ajax({
         url: 'AccionCarta.php',
         type: 'post',
         data:{
-            'codigoP': codigo
+            'codigoP': codigo,
+            'usuario': usuario
         },
-        success: function(dataA){
-          alert(dataA);
+        success: function(dataA, dataB){
+            alert("Producto agregado al carrito");
     
         }
     })
