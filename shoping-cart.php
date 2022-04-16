@@ -2,7 +2,7 @@
 include 'Conexion.php';
 session_start();
 $_USER = $_SESSION['id'];
-echo ($_USER);
+//echo ($_USER);
 ?>
 
 <!DOCTYPE html>
