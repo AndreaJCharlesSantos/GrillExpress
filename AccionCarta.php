@@ -11,7 +11,11 @@ $usuario=$_POST['usuario'];
 // $codigoO=$_POST['codigoO'];
 echo ($codigoP);
 echo ($usuario);
-$sql = "INSERT INTO detalle_carito (id_carrito,codigo_producto) VALUES ('$usuario','$codigoP');";
+$presql= "SELECT id FROM carrito where id_cliente='$usuario'";
+$resultado=mysqli_query($conexion,$presql);
+$idcarrito=mysqli_fetch_array($resultado);
+$id=$idcarrito['id'];
+$sql = "INSERT INTO detalle_carito (id_carrito,codigo_producto) VALUES ('$id','$codigoP');";
 if(mysqli_query($conexion,$sql)){
     echo '<script language="javascript">alert("Se ha agregado correctamente");</script>';
 }

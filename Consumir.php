@@ -1,5 +1,6 @@
 <?php
 require('Conexion.php');
+//Codigo que consume la tabla de productos y selecciona todos ellos
 $sql = "SELECT * FROM producto";
 mysqli_set_charset($conexion, "utf8");
 if(!$result = mysqli_query($conexion, $sql)) die();

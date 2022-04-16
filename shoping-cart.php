@@ -99,7 +99,9 @@ $_USER = $_SESSION['id'];
                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
                            <li><a href="carrito.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                        </ul>
-                       <div class="header__cart__price">Artículo: <span>$150.00</span></div>
+                       <div class="header__cart__price">Artículo: 
+                       <?php echo $_USER;?>
+      <span>$150.00</span></div>
 
                    </div>
 
@@ -128,7 +130,7 @@ $_USER = $_SESSION['id'];
                             <?php $query="Select nombre from usuario where id=".$_USER;
                             $resultado=mysqli_query($conexion,$query);
                             $nombre_user = mysqli_fetch_array($resultado)?>
-                            <h3><?php echo $nombre_user['nombre']?></h3>
+                            <h3><?php echo $nombre_user['nombre'];?></h3>
                             <?php mysqli_free_result($resultado); ?>
                         </div>
                     </div>
@@ -154,7 +156,8 @@ $_USER = $_SESSION['id'];
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php $carrito="Select id from carrito where id_cliente=".$_USER;
+                            <?php $ctemporal=0; $total=0;
+                            $carrito="Select id from carrito where id_cliente=".$_USER;
                             $resultado=mysqli_query($conexion,$carrito);
                             $carrito_cliente = mysqli_fetch_array($resultado);?>
                             <?php $detalle_carrito="Select * from detalle_carito where id_carrito=".$carrito_cliente['id'];
@@ -162,12 +165,23 @@ $_USER = $_SESSION['id'];
                                 while($row = mysqli_fetch_array($resultado_carrito)) {?>
                                     <?php $producto= "Select * from producto where codigo=". $row['codigo_producto'];
                                     $resultado_producto=mysqli_query($conexion,$producto);
-                                    while($fila = mysqli_fetch_array($resultado_producto)){?>
+                                    while($fila = mysqli_fetch_array($resultado_producto)){
+                                        $presql= "SELECT id FROM carrito where id_cliente=".$_USER;
+                                        $preresultado=mysqli_query($conexion,$presql);
+                                        $idcarrito=mysqli_fetch_array($preresultado);
+                                        $id=$idcarrito['id'];
+                                        $cod=$fila["codigo"];
+                                        $repetidos="SELECT codigo_producto, count(*) FROM detalle_carito where id_carrito='$id' and codigo_producto='$cod' HAVING COUNT(*)>1";
+                                        $resrep=mysqli_query($conexion,$repetidos);
+                                        $cant=mysqli_fetch_array($resrep);
+                                        if($ctemporal!=$fila["codigo"]){?>
                                     <tr id="<?php echo $fila["codigo"]?>">
                                         <td><?php echo $fila["nombre"];?> <img width="200px" height="200px" src=<?php echo $fila["Imagen"];?>></td>
-                                        <td><?php echo "$".$fila["Precio"]?></td>
+                                        <td><?php echo "$".$fila["Precio"];?></td>
+                                        <td> <?php echo $cant[1]; ?> </td>
+                                        <td> <?php echo "$".$fila["Precio"]*$cant[1];?> </td>
                                     </tr>
-                                    <?php }mysqli_free_result($resultado_producto);?>
+                                    <?php $ctemporal=$fila["codigo"];}$total+=$fila["Precio"];}mysqli_free_result($resultado_producto);?>
                                 <?php }
                                 mysqli_free_result($resultado_carrito);
                                 mysqli_free_result($resultado);
@@ -182,9 +196,9 @@ $_USER = $_SESSION['id'];
                     <div class="shoping__checkout">
                         <h5>TOTAL DEL CARRITO</h5>
                         <ul>
-                            <li>Total <span>$505.00</span></li>
+                            <li>Total <span>$<?php echo $total;?></span></li>
                         </ul>
-                        <a href="./orden-de-compra.html" class="primary-btn">CERRAR COMPRA</a>
+                        <a href="./orden-de-compra.php?total=<?php echo $total;?>" class="primary-btn">CERRAR COMPRA</a>
                     </div>
                 </div>
             </div>
