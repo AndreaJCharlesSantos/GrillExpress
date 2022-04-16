@@ -1,7 +1,8 @@
 <?php
 include 'Conexion.php';
+session_start();
 $_USER = $_SESSION['id'];
-//echo ($_USER);
+echo ($_USER);
 ?>
 
 <!DOCTYPE html>
@@ -124,7 +125,11 @@ $_USER = $_SESSION['id'];
                     <div class="breadcrumb__text">
                         <h2>CARRITO DE:</h2>
                         <div class="breadcrumb__option">
-                            <h3><USUARIO></h3>
+                            <?php $query="Select nombre from usuario where id=".$_USER;
+                            $resultado=mysqli_query($conexion,$query);
+                            $nombre_user = mysqli_fetch_array($resultado)?>
+                            <h3><?php echo $nombre_user['nombre']?></h3>
+                            <?php mysqli_free_result($resultado); ?>
                         </div>
                     </div>
                 </div>
@@ -149,10 +154,12 @@ $_USER = $_SESSION['id'];
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php $carrito="Select id from carrito where id_cliente='$_USER'";?>
-                            <?php $detalle_carrito="Select * from detalle_carito where id_carrito='$carrito'";
-                                $resultado=mysqli_query($conexion,$detalle_carrito);
-                                while($row = mysqli_fetch_array($resultado)) {?>
+                            <?php $carrito="Select id from carrito where id_cliente=".$_USER;
+                            $resultado=mysqli_query($conexion,$carrito);
+                            $carrito_cliente = mysqli_fetch_array($resultado);?>
+                            <?php $detalle_carrito="Select * from detalle_carito where id_carrito=".$carrito_cliente['id'];
+                                $resultado_carrito=mysqli_query($conexion,$detalle_carrito);
+                                while($row = mysqli_fetch_array($resultado_carrito)) {?>
                                     <?php $producto= "Select * from producto where codigo=". $row['codigo_producto'];
                                     $resultado_producto=mysqli_query($conexion,$producto);
                                     while($fila = mysqli_fetch_array($resultado_producto)){?>
@@ -162,6 +169,7 @@ $_USER = $_SESSION['id'];
                                     </tr>
                                     <?php }mysqli_free_result($resultado_producto);?>
                                 <?php }
+                                mysqli_free_result($resultado_carrito);
                                 mysqli_free_result($resultado);
                                 ?>
                             </tbody>
