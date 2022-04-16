@@ -59,7 +59,7 @@ $_USER = $_SESSION['id'];
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./index.php">Catálogo</a></li>
+                <li class="active"><a href="./index3.php">Catálogo</a></li>
                 <li><a href="./blog.html">Receta</a></li>
                 <li><a href="./login.php">Iniciar sesión</a></li>
             </ul>
@@ -82,13 +82,13 @@ $_USER = $_SESSION['id'];
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logitor.png" alt=""></a>
+                        <a href="./index3.php"><img src="img/logitor.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Catálogo</a></li>
+                            <li class="active"><a href="./index3.php">Catálogo</a></li>
                             <li><a href="./blog.html">Receta</a></li>
                             <li><a href="logout.php">Cerrar sesión</a></li>
                         </ul>
@@ -99,7 +99,7 @@ $_USER = $_SESSION['id'];
 
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="shoping-cart.html"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                            <li><a href="shoping-cart.php"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                         </ul>
                         <div class="header__cart__price">Artículo: <span>$150.00</span></div>
 
