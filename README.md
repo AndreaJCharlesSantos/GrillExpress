@@ -1,27 +1,40 @@
+
 # GrillExpress
-Pa el equipo más juapo
-## Tema: Ogani
-https://themewagon.com/themes/free-bootstrap-4-html5-responsive-ecommerce-website-template-ogani/
 
-Color base de la página: #ffbc5c \\
-Color base (fuerte): #ff9052 \\
-## Team:
+Página de Ecommerce dedicada a la venta de productos para la parrilla.
 
-  1. Andrea
-  2. Ángel
-  3. Arturo
-  4. Ezer
-  5. Aldo
-  6. Carlos
+## Color Reference
 
-## Frontend:
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Color base 1 | ![#ffbc5c](https://via.placeholder.com/10/ffbc5c?text=+) #ffbc5c |
+| Color base 2 | ![#ff9052](https://via.placeholder.com/10/ff9052?text=+) #ff9052 |
 
-1. Andrea
-2. Ezer
-3. Aldo
 
-## Backend:
 
-1. Carlos
-2. Arturo
-3. Ángel
+## Relacionado
+
+Plantilla usada
+
+[Ogani](https://themewagon.com/themes/free-bootstrap-4-html5-responsive-ecommerce-website-template-ogani/)
+
+
+## Installation
+
+Instala el proyecto con:
+
+```bash
+  git clone https://github.com/AndreaJCharlesSantos/GrillExpress.git
+  cd GrillExpress
+  Ejecuta la bd en tu local
+```
+    
+## Authors
+
+- [@AndreaJCharlesSantos](https://github.com/AndreaJCharlesSantos)
+- [@Angel](https://github.com/Angel-Balboa)
+- [@Arturo0312](https://github.com/Arturo0312)
+- [@CarlosMnz](https://github.com/CarlosMnz)
+- [@ezer](https://github.com/ezer-banda193)
+- [@aldopuga01](https://github.com/aldopuga01)
+
