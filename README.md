@@ -25,5 +25,3 @@ Color base (fuerte): #ff9052 \\
 1. Carlos
 2. Arturo
 3. Ángel
-
-# RECUERDEN HACER UN COMMIT DECENTE
