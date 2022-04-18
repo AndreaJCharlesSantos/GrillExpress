@@ -1,4 +1,5 @@
 <?php
+$var = 1;
 require ('Conexion.php');
     $getdestinos = "select * from producto";
 	$result = mysqli_query($conexion, $getdestinos)
