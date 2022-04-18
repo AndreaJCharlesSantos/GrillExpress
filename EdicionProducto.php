@@ -7,6 +7,7 @@ $sql="Select * from producto where codigo='$id'";
 <html lang="zxx">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="description" content="Editar Producto">
     <meta name="keywords" content="Ogani, unica, creative, html">
