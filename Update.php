@@ -11,6 +11,7 @@ require ('Conexion.php');
         echo '<script language="javascript">alert("Se ha agregado correctamente");</script>';
     }
     else{
+        
         echo '<script language="javascript">alert("JIJIJIJA");</script>';
     }
     $close = mysqli_close($conexion) 
