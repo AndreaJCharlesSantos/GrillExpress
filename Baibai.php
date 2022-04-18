@@ -9,7 +9,9 @@ if(mysqli_query($conexion,$sql)){
 }
 else{
     echo '<script language="javascript">alert("JIJIJIJA");</script>';
+
 }
+
 $close = mysqli_close($conexion) 
 or die("Ha sucedido un error inexperado en la desconexion de la base de datos");
 ?>
